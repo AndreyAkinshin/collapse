@@ -5,7 +5,7 @@
  R's quantile() function, Rfast2::Quantile(), and these references for sample quantiles:
    https://en.wikipedia.org/wiki/Quantile#Estimating_quantiles_from_a_sample
    https://doi.org/10.2307/2684934
-   https://aakinshin.net/posts/weighted-quantiles/
+   https://arxiv.org/abs/2304.07265
  At large, the weighted quantile algorithm is my own cooking [(C) 2022 Sebastian Krantz]
 */
 
@@ -220,7 +220,7 @@ for(int i = 0, ih; i < np; ++i) {                           \
 }
 
 // Proper quantile weighting? At least it gives the same results for equal weights of any magnitude.
-// See: https://aakinshin.net/posts/weighted-quantiles/
+// See: Andrey Akinshin (2023) "Weighted quantile estimators" arXiv:2304.07265 [stat.ME] https://arxiv.org/abs/2304.07265
 // And: https://en.wikipedia.org/wiki/Percentile#Weighted_percentile
 // Expects px and pw to be decremented by 1
 #undef WQUANTILE_CORE
